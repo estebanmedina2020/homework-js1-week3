@@ -13,3 +13,17 @@ for numbers divisible by only one of those).
 a significant percentage of programmer candidates. So if you solved it, your
 labor market value just went up.)
 */
+for (let num = 1; num < 101; num++) {
+  // check if the number is divisible by 3 or 5
+  let checkForThree = num % 3;
+  let checkForFive = num % 5;
+
+  // if the number is divisible by both 3 and 5, then print FizzBuzz
+  if (checkForThree == 0 && checkForFive == 0) console.log("MigraCode");
+  // if the number is divisible by 3, then print Migra
+  else if (checkForThree == 0) console.log("Migra");
+  // if the number is divisible by 5, then print Code
+  else if (checkForFive == 0) console.log("Code");
+  // otherwise just print the number
+  else console.log(num);
+}
