@@ -20,36 +20,6 @@ When you have a program that generates this pattern, define a binding size
 of the given width and height
 */
 
-// Initialize the board
-let board = "";
-let rows = 0;
-
-// Iterate through rows
-while (rows < 8) {
-  let cols = 0;
-  let previousHashed;
-
-  if (rows % 2 === 0) {
-    previousHashed = true;
-  } else {
-    previousHashed = false;
-  }
-
-  while (cols < 8) {
-    if (previousHashed) {
-      board += " ";
-    } else {
-      board += "#";
-    }
-    previousHashed = !previousHashed;
-    cols++;
-  }
-  board += "\n";
-  rows++;
-}
-// Print out the chessboard
-console.log(board);
-
 /*
 // Initialize the board
 var board = "";
@@ -99,3 +69,16 @@ while (rows < 8) {
 // Print out the chessboard
 console.log(board);
 */
+
+let size = 8;
+let board = "";
+
+for (let y = 0; y < size; y++) {
+  for (let x = 0; x < size; x++) {
+    if ((x + y) % 2 == 0) board += " ";
+    else board += "#";
+  }
+  board += "\n";
+}
+
+console.log(board);
