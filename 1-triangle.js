@@ -24,10 +24,10 @@ console.log(number.length);
 
 //your code here
 makeTriangle(7);
-function makeTriangle(altura) {
+function makeTriangle(height) {
   let triangle = [];
-  for (let i = 1; i <= altura; i++) {
-    triangle += "#";
+  for (let i = 1; i <= height; i++) {
+    let triangle = "";
     console.log(triangle);
   }
 }

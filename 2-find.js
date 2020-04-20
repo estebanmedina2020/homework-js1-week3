@@ -28,3 +28,16 @@ function find(cities, letter) {
 }
 console.log("Number of cities with A = " + find(citiesArray, "A"));
 console.log("Number of cities with B = " + find(citiesArray, "B"));
+
+const citiesArray = ["Amsterdam", "Athens", "Barcelona", "Madrid"];
+function find(cities, letter) {
+  let counter = 0;
+  for (let i = 0; i < cities.length; i++) {
+    if (cities[i].startsWith(letter)) {
+      counter++;
+    }
+  }
+  return counter;
+}
+console.log("Number of cities with A = " + find(citiesArray, "A"));
+console.log("Number of cities with B = " + find(citiesArray, "B"));
